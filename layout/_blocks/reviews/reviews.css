@@ -1,0 +1,146 @@
+@import "../review/review.css";
+
+.reviews {
+    padding-left: 172px;
+    position: relative;
+
+    @media (--L) {
+        padding-left: 0;
+    }
+
+    @media (--XS) {
+        padding-bottom: 172px;
+    }
+
+    &:before {
+        position: absolute;
+        content: url("../images/background/review.jpg");
+        top: -70px;
+        left: 0;
+        z-index: -1;
+
+        @media (--L) {
+            left: -50px;
+        }
+
+        @media (--M) {
+            top: -77px;
+        }
+
+        @media (--XS) {
+            display: none;
+        }
+    }
+
+    &--indent {
+        margin-bottom: 162px;
+
+        @media (--M) {
+            margin-bottom: 114px;
+        }
+
+        @media (--XS) {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 45px;
+
+        @media (--M) {
+            margin-bottom: 47px;
+        }
+
+        @media (--S) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__content {
+        width: 774px;
+        overflow: hidden;
+
+        @media (--M) {
+            width: 100%;
+        }
+    }
+    
+    &__list {
+        display: flex;
+    }
+
+    &__write {
+        font-weight: 700;
+        padding: 14px 37px;
+        margin-top: 9px;
+
+        @media (--M) {
+            margin-top: 0;
+        }
+
+        @media (--XS) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            max-width: 260px;
+            width: 100%;
+        }
+    }
+
+    &__controls {
+        width: 137px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        right: 18px;
+        bottom: 15px;
+
+        @media (--XS) {
+            bottom: 90px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            padding: 0 39px;
+            box-sizing: border-box;
+            border: 1px solid #ececec;
+        }
+    }
+
+    &__arrow {
+        display: block;
+        width: 50px;
+        height: 26px;
+
+        @media (--XS) {
+            padding: 12px 0;
+            width: 50%;
+        }
+
+        &--left {
+            background: url("../images/icons/arrow-left.svg") no-repeat;
+
+            @media (--XS) {
+                border-right: 1px solid #ececec;
+                background-position: left center;
+            }
+        }
+
+        &--right {
+            background: url("../images/icons/arrow-right.svg") no-repeat;
+
+            @media (--XS) {
+                background-position: right center;
+            }
+        }
+    }
+}
+
+.transition {
+    transition: transform 1s ease;
+}

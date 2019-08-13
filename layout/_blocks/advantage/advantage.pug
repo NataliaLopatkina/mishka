@@ -1,0 +1,8 @@
+mixin advantage(obj)
+    - var typeAdvantage = ""
+    if obj.typeAdvantage
+        - typeAdvantage = " advantage--" + obj.typeAdvantage
+
+    div(class="advantage advantage--item" + typeAdvantage)
+        img(class="advantage__img" src="images/icons/" + obj.image + ".png" alt="Advantage")
+        p(class="advantage__text") !{obj.text}

@@ -1,0 +1,106 @@
+@import "../main-navigation/main-navigation.css";
+
+.header {
+    background: #ffffff;
+
+    &__content {
+        border-bottom: 1px solid #ececec;
+    }
+
+    &__logo {
+        margin-right: 30px;
+
+        @media (--S) {
+            order: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__actions {
+        @media (--S) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 18px;
+        }
+
+        @media (--XS) {
+            justify-content: center;
+        }
+    }
+
+    &__menu {
+        display: none;
+
+        @media (--S) {
+            display: block;
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0;
+
+            &.header__menu--opened {
+                width: 20px;
+                height: 14px;
+                top: 31px;
+                right: 31px;
+
+                .header__menu-container {
+                    width: 20px;
+
+                    &:before,
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 20px;
+                        height: 2px;
+                        background: #221f1f;
+                        left: 0;
+                    }
+
+                    &:before {
+                        top: -6px;
+                    }
+
+                    &:after {
+                        bottom: -6px;
+                    }
+                }
+            }
+
+            &--closed {
+                width: 24px;
+                height: 24px;
+                transform: rotate(45deg);
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 2px;
+                    background: #221f1f;
+                    transform: rotate(90deg);
+                    top: 11px;
+                    left: 0;
+                }
+            }
+        }
+
+        @media (--S) {
+            position: absolute;
+            top: 27px;
+            right: 30px;
+        }
+    }
+
+    &__menu-container {
+        @media (--S) {
+            display: block;
+            position: relative;
+            width: 25px;
+            height: 2px;
+            background: #221f1f;
+        }
+    }
+}

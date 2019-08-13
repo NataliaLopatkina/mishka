@@ -1,0 +1,59 @@
+extends ../../_blocks/template/template.pug
+
+block content
+
+    include ../../_blocks/banner/banner.pug
+    +banner({
+        title: "Каталог товаров",
+    })(class="banner--catalog")
+
+    div(class="wave wave--catalog")
+
+    section(class="catalog")
+        div(class="box catalog__content")
+            h2(class="visually-hidden") Каталог товаров
+            div(class="products-list products-list--catalog")
+                include ../../_blocks/product/product.pug
+                -
+                    var products = [
+                        {
+                            image: "photo-1",
+                            imageTablet: "photo-1-tablet",
+                            imageMobile: "photo-1-mobile",
+                            title: "Зайчик-попрыгайчик",
+                            dimensions: "Рост 30 см, вес 200 г",
+                            cost: "1 200 руб.",
+                        },
+
+                        {
+                            image: "photo-2",
+                            imageTablet: "photo-2-tablet",
+                            imageMobile: "photo-2-mobile",
+                            title: "Корзинка для белья",
+                            dimensions: "Диаметр 15 см, высота 10 см",
+                            cost: "690 руб.",
+                        },
+
+                        {
+                            image: "photo-3",
+                            imageTablet: "photo-3-tablet",
+                            imageMobile: "photo-3-mobile",
+                            title: "Большая корзинка для игрушек",
+                            dimensions: "Диаметр 30 см, высота 30 см",
+                            cost: "1 500 руб.",
+                        },
+                    ]
+
+                each obj in products
+                    +product(obj)(class="product--indent")
+
+            div(class="production-process production-process--catalog")
+                div(class="process-video")
+                    video(class="process-video__content")
+                        source(src="#5" type="video/mp4")
+                    button(class="button button--no-border process-video__play")
+                        img(class="process-video__play-icon" src="images/icons/play.svg" alt="Включить видео")
+                include ../../_blocks/process-description/process-description.pug
+
+    block modal
+        include ../../_blocks/modal-order/modal-order.pug

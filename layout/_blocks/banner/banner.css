@@ -1,0 +1,146 @@
+@import "../banner-nav/banner-nav.css";
+@import "../title/title.css";
+
+.banner {
+    background: url("../images/background/hero-desktop.jpg") no-repeat center top;
+    background-color: #f9f9f9;
+    padding-top: 17px;
+    padding-bottom: 358px;
+
+    @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+        background: url("../images/background/hero-desktop@2x.jpg") no-repeat center top;
+        background-size: 1150px auto;
+        background-color: #f9f9f9;
+    }
+
+    @media (--M) {
+        padding-top: 21px;
+        padding-bottom: 375px;
+    }
+
+    @media (--XS) {
+        padding-top: 70px;
+        background: url("../images/background/hero-mobile.jpg") no-repeat center top;
+        padding-bottom: 120px;
+
+        @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+            background: url("../images/background/hero-mobile@2x.jpg") no-repeat center top;
+            background-size: 575px auto;
+        }
+    }
+
+    &.banner--catalog {
+        background: #f1f1f1;
+        padding-bottom: 102px;
+
+        @media (--M) {
+            padding-bottom: 79px;
+        }
+
+        @media (--S) {
+            margin-bottom: 30px;
+        }
+
+        @media (--XS) {
+            background: #f1f1f1;
+            padding-bottom: 76px;
+        }
+
+        @media (--S) {
+            padding-top: 76px;
+            padding-bottom: 76px; 
+        }
+
+        .banner__header {
+            margin-bottom: 52px;
+
+            @media (--M) {
+                margin-bottom: 57px;
+            }
+
+            @media (--S) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.banner--form {
+        background: #f1f1f1;
+        padding-bottom: 102px;
+
+        @media (--L) {
+            padding-bottom: 94px;
+        }
+
+        @media (--M) {
+            padding-bottom: 83px;
+        }
+
+        @media (--S) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+            margin-bottom: 22px;
+        }
+
+        @media(--XS) {
+            background: #f1f1f1;
+            padding-top: 70px;
+            padding-bottom: 75px;
+        }
+
+        .banner__header {
+            margin-bottom: 53px;
+
+            @media (--S) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 113px;
+
+        @media (--M) {
+            margin-bottom: 115px;
+        }
+
+        @media (--S) {
+            margin-bottom: 0;
+        } 
+    }
+
+    &__text {
+        font-size: 15px;
+        font-weight: 400;
+
+        @media (--M) {
+            margin-left :auto;
+        }
+
+        @media (--S) {
+            display: none;
+        }
+    }
+
+    &__title {
+        letter-spacing: -0.1px;
+        max-width: 684px;
+        text-align: center;
+        margin: 0 auto;
+
+        @media (--XS) {
+            font-size: 27px;
+        }
+
+        br {
+            display: none;
+
+            @media (--XS) {
+                display: block;
+            } 
+        }
+    }
+}

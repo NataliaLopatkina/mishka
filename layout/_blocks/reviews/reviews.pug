@@ -1,0 +1,35 @@
+section(class="reviews reviews--indent")
+    div(class="reviews__header")
+        h3(class="title reviews__title") Отзывы
+        button(class="button reviews__write") Написать
+
+    div(class="reviews__content")
+        div(class="reviews__list")
+            include ../../_blocks/review/review.pug
+            - 
+                var reviews = [
+                    {
+                        text: "Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, <br> и мои фотографии сразу стали более стильными, а также набирают больше лайков!",
+                        author: "Анастасия Красильникова",
+                        mail: "@misssssiskras",
+                    },
+
+                    {
+                        text: "Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, <br> и мои фотографии сразу стали более стильными, а также набирают больше лайков!",
+                        author: "Анастасия Красильникова",
+                        mail: "@misssssiskras",
+                    },
+
+                    {
+                        text: "Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, <br> и мои фотографии сразу стали более стильными, а также набирают больше лайков!",
+                        author: "Анастасия Красильникова",
+                        mail: "@misssssiskras",
+                    },
+                ]
+
+            each obj in reviews
+                +review(obj)
+
+    div(class="reviews__controls")
+        a(class="reviews__arrow reviews__arrow--left" href="#5")
+        a(class="reviews__arrow reviews__arrow--right" href="#5")

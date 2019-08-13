@@ -1,0 +1,46 @@
+div(class="advantages advantages--indent")
+    h3(class="title advantages__title") Коротко о нас:
+    div(class="advantages__content")
+
+        include ../../_blocks/advantage/advantage.pug
+        -
+            var advantages = [
+                {
+                    typeAdvantage: "materials",
+                    image: "advantage-1",
+                    text: "Экологически чистые материалы",
+                },
+
+                {
+                    typeAdvantage: "love",
+                    image: "advantage-2",
+                    text: "Связано вручную с любовью и умилением",
+                },
+
+                {
+                    typeAdvantage: "style",
+                    image: "advantage-3",
+                    text: "Скандинавский стиль по российской цене",
+                },
+
+                {
+                    typeAdvantage: "support",
+                    image: "advantage-4",
+                    text: "Поддержка отечественного производителя",
+                },
+
+                {
+                    typeAdvantage: "like",
+                    image: "advantage-5",
+                    text: "Увеличивает лайки на фотографиях",
+                },
+
+                {
+                    typeAdvantage: "gift-wrap",
+                    image: "advantage-6",
+                    text: "Поставляется в подарочной упаковке",
+                },
+            ]
+
+        each obj in advantages
+            +advantage(obj)

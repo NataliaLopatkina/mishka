@@ -1,0 +1,35 @@
+.banner-nav {
+    @media (--M) {
+        display: none;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 57px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        font-size: 15px;
+        letter-spacing: 0.3px;
+        line-height: calc(24/15);
+        opacity: 1;
+        color: #000000;
+        transition: opacity 0.25s ease;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}

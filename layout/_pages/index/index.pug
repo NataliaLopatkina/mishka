@@ -1,0 +1,29 @@
+extends ../../_blocks/template/template.pug
+
+block content
+
+    include ../../_blocks/banner/banner.pug
+    +banner({
+        title: "Милые штуки ручной<br> работы для дома",
+    })
+
+    include ../../_blocks/products/products.pug
+
+    div(class="wave wave--indent")
+
+    div(class="box content")
+
+            include ../../_blocks/product-featured/product-featured.pug
+
+            div(class="grey-wave grey-wave--product-featured")
+
+            include ../../_blocks/advantages/advantages.pug
+
+            include ../../_blocks/reviews/reviews.pug
+
+            div(class="grey-wave grey-wave--reviews")
+
+            include ../../_blocks/contacts/contacts.pug
+
+    block modal
+        include ../../_blocks/modal-order/modal-order.pug

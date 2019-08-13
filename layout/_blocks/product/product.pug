@@ -1,0 +1,15 @@
+mixin product(obj)
+    div(class="product")&attributes(attributes)
+        div(class="product__photo")
+            picture
+                source(class="product__img" srcset="images/product/" + obj.imageMobile + ".jpg" media="(max-width: 767px)")
+                source(class="product__img" srcset="images/product/" + obj.imageTablet + ".jpg" media="(max-width: 991px)")
+                img(class="product__img" src="images/product/" + obj.image + ".jpg" srcset="images/product/" + obj.image + "@2x" + ".jpg" + " 2x" alt="Product")
+        div(class="product__description")
+            div(class="product__properties")
+                a(href="#5" class="product__title") !{obj.title}
+                p(class="product__dimensions") !{obj.dimensions}
+            div(class="product__buy")
+                p(class="product__cost") !{obj.cost}
+                button(class="button button--no-border product__button")
+                    img(class="product__basket" src="images/icons/basket.svg" alt="Basket")

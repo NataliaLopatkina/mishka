@@ -1,0 +1,22 @@
+@import "../product/product.css";
+
+.products-list {
+    display: flex;
+    justify-content: space-between;
+
+    @media (--M) {
+        flex-direction: column;
+    }
+
+    &--catalog {
+        margin-bottom: 57px;
+
+        @media (--M) {
+            margin-bottom: 53px;
+        }
+
+        @media (--XS) {
+            margin-bottom: 31px;
+        }
+    }
+}

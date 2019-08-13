@@ -1,0 +1,126 @@
+.modal-order {
+    position: absolute;
+    top: 0;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    height: 100%;
+    width: 100%;
+    z-index: 1001;
+
+    &__content {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 568px;
+        height: 338px;
+        padding: 32px 99px 30px 98px;
+        border: 1px solid #c6c6c6;
+        background: #ffffff;
+        box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+        box-sizing: border-box;
+
+        @media (--XS) {
+            width: 320px;
+            padding: 31px 30px 46px 30px;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        letter-spacing: -0.2px;
+        line-height: calc(57/30);
+        text-transform: uppercase;
+        padding-left: 3px;
+        margin-bottom: 15px;
+
+        @media (--XS) {
+            font-size: 25px;
+            line-height: calc(30/25);
+            max-width: 147px;
+            margin: 0 auto;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__text {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: calc(30/17);
+        color: #444444;
+        margin-bottom: 20px;
+
+        @media (--XS) {
+            font-size: 15px;
+            line-height: calc(30/15);
+            margin-bottom: 23px;
+        }
+    }
+
+    &__size-list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: 31px;
+    }
+
+    &__size-item {
+        width: 112px;
+        padding: 15px 49px;
+        border: 2px solid #ececec;
+        box-sizing: border-box;
+        margin-right: 7px;
+        transition: border 0.25s ease;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            border: 2px solid #c7c7c7;
+        }
+
+        @media (--XS) {
+            width: 82px;
+            padding: 15px 30px;
+        }
+    }
+
+    &__size-text {
+        font-size: 17px;
+        color: #444444;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        display: inline-block;
+        border: none;
+        background: #63d1bb;
+        color: #ffffff;
+        padding: 16px 126px;
+        cursor: pointer;
+
+        @media (--XS) {
+            width: 100%;
+            padding: 15px 83px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.modal-order.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.selected {
+    border: 2px solid #63d1bb;
+}

@@ -1,0 +1,104 @@
+.process-description {
+    width: 288px;
+    padding-top: 47px;
+
+    @media (--M) {
+        width: 100%;
+        border: 1px solid #ececec;
+        padding-bottom: 35px;
+        box-sizing: border-box;
+        padding-top: 38px;
+        padding-left: 39px;
+        padding-right: 42px;
+    }
+
+    @media (--XS) {
+        padding: 25px 35px 32px 33px;
+        border: none;
+    }
+
+    &__header {
+        @media (--M) {
+            display: flex;
+            align-items: center;
+            padding-left: 2px;
+            margin-bottom: 33px;
+        }
+
+        @media (--XS) {
+            position: absolute;
+            top: 22px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 194px;
+
+        }
+    }
+
+    &__icon {
+        margin-bottom: 24px;
+
+        @media (--M) {
+            margin-right: 31px;
+            margin-bottom: 0;
+        }
+
+        @media (--XS) {
+            margin-right: 24px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        width: 148px;
+        margin-bottom: 34px;
+
+        @media (--M) {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        @media (--XS) {
+            font-size: 17px;
+            line-height: calc(24/17);
+        }
+    }
+
+    &__text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: calc(30/15);
+        color: #444444;
+        margin-bottom: 46px;
+
+        @media (--M) {
+            margin-bottom: 35px;
+        }
+
+        @media (--XS) {
+            font-size: 13px;
+            line-height: calc(24/13);
+            margin-bottom: 26px;
+        }
+    }
+
+    &__button {
+        margin-left: 2px;
+        padding: 13px 45px 15px 42px;
+
+        @media (--L) {
+            margin-bottom: 10px;
+        }
+        
+        @media (--M) {
+            width: 100%;
+        }
+
+        @media (--S) {
+            padding: 14px 20px;
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+    }
+}

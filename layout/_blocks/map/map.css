@@ -1,0 +1,40 @@
+.map {
+    width: 525px;
+    height: 457px;
+    background: url("../images/map/map.jpg") no-repeat center;
+
+    @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+        background: url("../images/map/map@2x.jpg") no-repeat center;
+        background-size: 525px auto;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    @media (--L) {
+        width: 100%;
+    }
+
+    @media (--M) {
+        margin-left: -50px;
+        margin-right: -50px;
+        width: auto;
+
+        background: url("../images/map/map-tablet.jpg") no-repeat center;
+
+        @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+            background: url("../images/map/map-tablet@2x.jpg") no-repeat center;
+            background-size: 768px auto;
+        }
+    }
+
+    @media (--XS) {
+        background: url("../images/map/map-mobile.jpg") no-repeat center;
+
+        @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+            background: url("../images/map/map-mobile@2x.jpg") no-repeat center;
+            background-size: 320px auto;
+        }
+    }
+}

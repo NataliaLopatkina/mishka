@@ -1,0 +1,42 @@
+.social-links {
+    @media (--XS) {
+        width: 100%;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: flex-end;
+        padding-top: 4px;
+
+        @media (--S) {
+            padding-top: 0; 
+        }
+
+        @media (--XS) {
+            justify-content: center; 
+        }
+    }
+
+    &__item {
+        margin-right: 41px;
+
+        @media (--S) {
+            margin-right: 30px;
+        }
+
+        @media (--XS) {
+            margin-right: 43px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+    }
+}

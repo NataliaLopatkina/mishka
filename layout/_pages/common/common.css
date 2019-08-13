@@ -1,0 +1,29 @@
+@import "../../_blocks/normalize/normalize.css";
+@import "../../_blocks/reset/reset.css";
+
+/* Styles */
+
+@import "../../_blocks/global/global.css";
+@import "../../_blocks/box/box.css";
+@import "../../_blocks/content/content.css";
+@import "../../_blocks/header/header.css";
+@import "../../_blocks/banner/banner.css";
+@import "../../_blocks/products/products.css";
+@import "../../_blocks/wave/wave.css";
+@import "../../_blocks/product-featured/product-featured.css";
+@import "../../_blocks/grey-wave/grey-wave.css";
+@import "../../_blocks/advantages/advantages.css";
+@import "../../_blocks/reviews/reviews.css";
+@import "../../_blocks/contacts/contacts.css";
+@import "../../_blocks/footer/footer.css";
+@import "../../_blocks/modal-order/modal-order.css";
+
+/* Page catalog */
+
+@import "../../_blocks/products-list/products-list.css";
+@import "../../_blocks/visually-hidden/visually-hidden.css";
+@import "../../_blocks/production-process/production-process.css";
+
+/* Page form */
+
+@import "../../_blocks/form-order/form-order.css";

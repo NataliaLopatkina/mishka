@@ -1,0 +1,13 @@
+.title {
+    font-size: 53px;
+    line-height: calc(57/53);
+
+    @media (--M) {
+        font-size: 43px;
+        line-height: calc(43/37);
+    }
+
+    @media (--XS) {
+        font-size: 25px;
+    }
+}

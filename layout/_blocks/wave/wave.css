@@ -1,0 +1,38 @@
+.wave {
+    background: url("../images/icons/wave.svg") no-repeat center;
+    height: 34px;
+    position: relative;
+    z-index: 1000;
+    margin-top: -15px;
+
+    @media (--M) {
+        background: url("../images/icons/wave-tablet.svg") no-repeat center;
+        margin-bottom: 28px;
+    }
+
+    @media (--S) {
+        display: none;
+    }
+
+    &--indent {
+        margin-bottom: 32px;
+    }
+
+    &--catalog {
+        background: url("../images/icons/wave-catalog.svg") no-repeat center top;
+        margin-bottom: 111px;
+
+        @media (--M) {
+            margin-bottom: 62px;
+        }
+    }
+
+    &--form {
+        background: url("../images/icons/wave-form.svg") no-repeat center top;
+        margin-bottom: 104px;
+
+        @media (--M) {
+            margin-bottom: 55px;
+        }
+    }
+}

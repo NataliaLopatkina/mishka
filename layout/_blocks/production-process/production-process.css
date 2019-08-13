@@ -1,0 +1,31 @@
+@import "../process-video/process-video.css";
+@import "../process-description/process-description.css";
+
+.production-process {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid #ececec;
+
+    @media (--M) {
+        flex-direction: column;
+        border: none;
+    }
+
+    @media (--XS) {
+        padding-top: 96px;
+        border: 1px solid #ececec;
+    }
+
+    &--catalog {
+        margin-bottom: 105px;
+
+        @media (--M) {
+            margin-bottom: 63px;
+        }
+
+        @media (--S) {
+            margin-bottom: 58px;
+        }
+    }
+}

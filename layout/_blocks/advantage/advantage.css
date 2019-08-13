@@ -1,0 +1,151 @@
+.advantage {
+    max-width: 295px;
+
+    @media (--L) {
+        max-width: 355px;
+    }
+
+    @media (--M) {
+        max-width: 295px;
+    }
+
+    @media (--S) {
+        max-width: 203px;
+    }
+
+    @media (--XS) {
+        max-width: 249px;
+    }
+
+    &--item {
+        margin-bottom: 67px;
+
+        @media (--M) {
+            margin-bottom: 59px;
+        }
+
+        @media (--S) {
+            margin-bottom: 31px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &--materials {
+        max-width: 205px;
+
+        @media (--M) {
+            max-width: 204px;
+        }
+
+        @media (--XS) {
+            max-width: 174px;
+            order: 1;
+        }
+
+        .advantage__img {
+            @media (--M) {
+                padding-left: 8px;
+            }
+        }
+    }
+
+    &--style {
+        max-width: 235px;
+
+        @media (--M) {
+            max-width: 234px;
+            margin-bottom: 63px;
+        }
+
+        @media (--XS) {
+            max-width: 199px;
+            order: 2;
+            margin-bottom: 35px;
+        }
+
+        .advantage__img {
+            @media (--M) {
+                padding-left: 1px;
+                margin-bottom: 23px;
+            }
+        }
+    }
+
+    &--like {
+        @media (--M) {
+            max-width: 212px;
+        }
+
+        .advantage__img {
+            @media (--M) {
+                padding-left: 8px;
+                margin-bottom: 18px;
+            }
+        }
+
+        @media (--XS) {
+            max-width: 180px;
+            order: 3;
+            margin-bottom: 27px;
+        } 
+    }
+
+    &--love {
+        @media (--XS) {
+            order: 4;
+        }
+
+        .advantage__img {
+            @media (--M) {
+                padding-top: 5px;
+                padding-left: 2px;
+            }
+        }
+    }
+
+    &--support {
+        @media (--XS) {
+            order: 5;
+            margin-bottom: 36px;
+        }
+
+        .advantage__img {
+            @media (--M) {
+                padding-top: 2px;
+                margin-left: 2px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &--gift-wrap {
+        @media (--XS) {
+            order: 6;
+        }
+        
+        .advantage__img {
+            @media (--M) {
+                margin-top: -5px;
+                margin-left: 2px;
+                margin-bottom: 17px;
+            }
+        }
+    }
+
+    &__img {
+        margin-bottom: 14px;
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: calc(22/20);
+
+        @media (--S) {
+            font-size: 17px;
+            line-height: calc(20/17);
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.review {
+    padding-left: 4px;
+
+    &__text {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: calc(30/17);
+        color: #444444;
+        max-width: 770px;
+        margin-bottom: 39px;
+
+        @media (--M) {
+            margin-bottom: 57px;
+        }
+
+        @media (--S) {
+            font-size: 15px;
+            line-height: calc(30/15);
+        }
+
+        @media (--XS) {
+            margin-bottom: 26px;
+        }
+
+        br {
+            @media (--M) {
+                display: none;
+            }
+        }
+    }
+
+    &__author {
+        font-size: 17px;
+        letter-spacing: 0.1px;
+        line-height: calc(24/17);
+        margin-bottom: 3px;
+
+        @media (--M) {
+            font-size: 18px;
+        }
+
+        @media (--XS) {
+            font-size: 17px;
+        }
+    }
+
+    &__author-mail {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: calc(30/17);
+        color: #444444;
+    }
+}

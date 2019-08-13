@@ -1,0 +1,75 @@
+extends ../../_blocks/template/template.pug
+
+block content
+    include ../../_blocks/banner/banner.pug
+    +banner({
+        title: "Вязание на заказ",
+    })(class="banner--form")
+
+    div(class="wave wave--form")
+    div(class="form")
+        div(class="form__content")
+            form(class="form-order" method="post" action="#5")
+                p(class="box form-order__text") Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+                div(class="box form-order__item form-order__item--type")
+                    p(class="form-order__title") Тип
+                    div(class="form-order__radiobutton-list")
+                        div(class="form-order__radiobutton-item")
+                            input(type="radio" id="radio-1" class="form-order__input-radio" checked)
+                            label(for="radio-1" class="form-order__label form-order__label--type") Аксессуар для интерьера
+                        div(class="form-order__radiobutton-item")
+                            input(type="radio" id="radio-2" class="form-order__input-radio")
+                            label(for="radio-2" class="form-order__label form-order__label--type") Детская игрушка
+
+                div(class="form-order__content form-order__content--color")
+                    div(class="box form-order__item form-order__item--color")
+                        p(class="form-order__title form-order__title--color") Цвет
+                        div(class="form-order__checkbox-list")
+                            div(class="form-order__checkbox-item")
+                                input(type="checkbox" id="color-1" class="form-order__input-checkbox" checked)
+                                label(for="color-1" class="form-order__label form-order__label--color") Белый
+                            div(class="form-order__checkbox-item")
+                                input(type="checkbox" id="color-2" class="form-order__input-checkbox")
+                                label(for="color-2" class="form-order__label form-order__label--color") Серый
+                            div(class="form-order__checkbox-item")
+                                input(type="checkbox" id="color-3" class="form-order__input-checkbox" checked)
+                                label(for="color-3" class="form-order__label form-order__label--color") «Тиффани»
+                            div(class="form-order__checkbox-item")
+                                input(type="checkbox" id="color-4" class="form-order__input-checkbox")
+                                label(for="color-4" class="form-order__label form-order__label--color") Черный
+                            div(class="form-order__checkbox-item")
+                                input(type="checkbox" id="color-5" class="form-order__input-checkbox")
+                                label(for="color-5" class="form-order__label form-order__label--color") Розовый
+                            div(class="form-order__checkbox-item")
+                                input(type="checkbox" id="color-6" class="form-order__input-checkbox")
+                                label(for="color-6" class="form-order__label form-order__label--color") Оранжевый
+
+                div(class="box form-order__item form-order__item--personal-data")
+                    p(class="form-order__title form-order__title--data") ФИО
+                    div(class="form-order__personal-data-list")
+                        div(class="form-order__personal-data-item")
+                            label(for="name" class="form-order__label form-order__label--data") Имя:
+                            input(id="name" type="text" class="form-order__field-text" placeholder="Введите ваше имя*")
+                        div(class="form-order__personal-data-item")
+                            label(for="surname" class="form-order__label form-order__label--data") Фамилия:
+                            input(id="surname" type="text" class="form-order__field-text" placeholder="Укажите фамилию*")
+                        div(class="form-order__personal-data-item")
+                            label(for="patronymic" class="form-order__label form-order__label--data") Отчество:
+                            input(id="patronymic" type="text" class="form-order__field-text" placeholder="Отчество, если желаете")
+
+                div(class="form-order__content form-order__content--contact-data")
+                    div(class="box form-order__item form-order__item--contact-data")
+                        div(class="form-order__phone")
+                            label(for="phone" class="form-order__title form-order__title--contact form-order__title--contact-phone") Тел
+                            input(id="phone" class="form-order__field-text" type="tel" placeholder="+7 ХХХ ХХ ХХ*")
+                        div(class="form-order__email")
+                            label(for="mail" class="form-order__title form-order__title--contact") E-mail
+                            input(id="mail" class="form-order__field-text" type="email" placeholder="Ваш Email*")
+
+                div(class="box form-order__item form-order__item--wishes")
+                    label(for="additionally" class="form-order__title form-order__title--note") Доп
+                    textarea(id="additionally" class="form-order__field-wishes" placeholder="Опишите все ваши пожелания к заказу")
+
+                div(class="box form-order__item form-order__item--actions")
+                    button(class="button form-order__button") Отправить заказ
+                    span(class="form-order__note") *Поля обязательны для заполнения

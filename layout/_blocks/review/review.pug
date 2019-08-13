@@ -1,0 +1,5 @@
+mixin review(obj)
+    div(class="review")
+        p(class="review__text") !{obj.text}
+        p(class="review__author") !{obj.author}
+        a(href="mailto:" + obj.mail class="review__author-mail") !{obj.mail}

@@ -1,0 +1,9 @@
+mixin banner(obj)
+    div(class="banner")&attributes(attributes)
+        div(class="box banner__content")
+            div(class="banner__header")
+                include ../../_blocks/banner-nav/banner-nav.pug
+                
+                p(class="banner__text") Бесплатная доставка по России
+
+            h1(class="title banner__title") !{obj.title}

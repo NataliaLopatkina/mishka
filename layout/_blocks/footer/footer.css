@@ -1,0 +1,35 @@
+@import "../social-links/social-links.css";
+@import "../copyright/copyright.css";
+
+.footer {
+    background: #f1f1f1;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 51px;
+        padding-bottom: 55px;
+
+        @media (--XS) {
+            flex-direction: column;
+            padding-top: 23px;
+            padding-bottom: 24px;
+        }
+    }
+
+    &__logo {
+        padding-left: 2px;
+        margin-right: 79px;
+
+        @media (--S) {
+            margin-right: 0;
+        }
+    }
+
+    &__logo-img {
+        @media (--XS) {
+            display: none;
+        }
+    }
+}

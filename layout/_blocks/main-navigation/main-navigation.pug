@@ -1,0 +1,28 @@
+nav(class="main-navigation")
+    ul(class="main-navigation__list main-navigation__list--links")
+        li(class="main-navigation__item main-navigation__item--catalog")
+            a(href="catalog.html" class="main-navigation__link") Каталог товаров
+        li(class="main-navigation__item main-navigation__item--order")
+            a(href="form.html" class="main-navigation__link") Вязание на заказ
+
+    div(class="header__actions")
+        a(class="header__logo" href="index.html")
+            picture
+                source(class="header__logo-img" srcset="images/icons/logo-mobile.svg" media="(max-width: 767px)")
+                source(class="header__logo-img" srcset="images/icons/logo-tablet.svg" media="(max-width: 991px)")
+                img(class="header__logo-img" src="images/icons/logo-desktop.svg" alt="Logo")
+        button(class="header__menu header__menu--opened")
+            span(class="header__menu-container")
+    
+    ul(class="main-navigation__list main-navigation__list--buttons")
+        li(class="main-navigation__item")
+            form(class="main-navigation__form" method="post" action="#5")
+                div(class="main-navigation__search-content")
+                    button(class="button button--no-border main-navigation__search" type="button")
+                        img(class="main-navigation__search-img" src="images/icons/search.svg" alt="Search")
+                    label(class="main-navigation__search-label" for="search") Поиск по сайту
+                    input(class="main-navigation__field" id="search")
+        li(class="main-navigation__item main-navigation__item--basket")
+            button(class="button button--no-border main-navigation__basket" type="button")
+                img(class="main-navigation__basket-img" src="images/icons/basket.svg" alt="Basket")
+            a(class="main-navigation__link main-navigation__link--basket" href="#5") Корзина: пока пуста
